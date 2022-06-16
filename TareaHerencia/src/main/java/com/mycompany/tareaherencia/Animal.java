@@ -8,14 +8,34 @@ package com.mycompany.tareaherencia;
  *
  * @author antho
  */
-public class Animal extends SerVivo {
+public class Animal extends SerVivo implements InterfaceAnimal{
     protected String especie;
     protected String tipoSangre;
 
-    public Animal(String nombre, String tipoReino, String entorno, String alimentacion, String reproduccion,String especie, String tipoSangre) {
-        super(nombre, tipoReino, entorno, alimentacion, reproduccion);
+    public Animal(String nombre, String tipoReino, String entorno, String especie, String tipoSangre) {
+        super(nombre, tipoReino, entorno);
         this.especie = especie;
         this.tipoSangre = tipoSangre;
+    }
+    
+    @Override
+    public String sonido(String sonido){
+        return "El sonido de este animal es: "+sonido;
+    }
+    
+    @Override
+    public String comida(String comida){
+        return "Le gusta comer: "+comida;
+    }
+    
+    @Override
+    public String alimentarse(String a){
+        return "Este animal se alimenta mediante: "+a;
+    }
+    
+    @Override
+    public String reproducirse(String r){
+        return "Este animal se reproduce por: "+r;
     }
 
     public String getEspecie() {

@@ -13,9 +13,19 @@ public class Fungi extends SerVivo {
     protected String funcion;
 
     public Fungi(String nombre, String tipoReino, String entorno, String alimentacion, String reproduccion, String forma, String funcion) {
-        super(nombre, tipoReino, entorno, alimentacion, reproduccion);
+        super(nombre, tipoReino, entorno);
         this.forma = forma;
         this.funcion = funcion;
+    }
+    
+    @Override
+    public String alimentarse(String a){
+        return a;
+    }
+    
+    @Override
+    public String reproducirse(String r){
+        return r;
     }
 
     public String getForma() {
@@ -42,6 +52,5 @@ public class Fungi extends SerVivo {
         sb.append("\nFuncion=").append(funcion);
         return sb.toString();
     }
-    
     
 }

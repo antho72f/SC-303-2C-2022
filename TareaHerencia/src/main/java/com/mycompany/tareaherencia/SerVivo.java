@@ -8,19 +8,15 @@ package com.mycompany.tareaherencia;
  *
  * @author antho
  */
-public class SerVivo {
+public abstract class SerVivo {
     protected String nombre;
     protected String tipoReino;
     protected String entorno;
-    protected String alimentacion;
-    protected String reproduccion;
 
-    public SerVivo(String nombre, String tipoReino, String entorno, String alimentacion, String reproduccion) {
+    public SerVivo(String nombre, String tipoReino, String entorno) {
         this.nombre = nombre;
         this.tipoReino = tipoReino;
         this.entorno = entorno;
-        this.alimentacion = alimentacion;
-        this.reproduccion = reproduccion;
     }
 
     public String getNombre() {
@@ -47,21 +43,9 @@ public class SerVivo {
         this.entorno = entorno;
     }
     
-    public String getAlimentacion() {
-        return alimentacion;
-    }
-
-    public void setNutriccion(String nutriccion) {
-        this.alimentacion = nutriccion;
-    }
-
-    public String getReproduccion() {
-        return reproduccion;
-    }
-
-    public void setReproduccion(String reproduccion) {
-        this.reproduccion = reproduccion;
-    }
+    public abstract String alimentarse(String a);
+    
+    public abstract String reproducirse(String r);
 
     @Override
     public String toString() {
@@ -70,8 +54,6 @@ public class SerVivo {
         sb.append("\nNombre: ").append(nombre);
         sb.append("\nReino: ").append(tipoReino);
         sb.append("\nEntorno: ").append(entorno);
-        sb.append("\nAlimentación: ").append(alimentacion);
-        sb.append("\nReproducción: ").append(reproduccion);
         return sb.toString();
     }
     

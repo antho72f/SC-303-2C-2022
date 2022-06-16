@@ -13,9 +13,19 @@ public class Vegetal extends SerVivo {
     private String duracion;
 
     public Vegetal(String nombre, String tipoReino, String entorno, String alimentacion, String reproduccion, String tipo, String duracion) {
-        super(nombre, tipoReino, entorno, alimentacion, reproduccion);
+        super(nombre, tipoReino, entorno);
         this.tipo = tipo;
         this.duracion = duracion;
+    }
+    
+    @Override
+    public String alimentarse(String a){
+        return a;
+    }
+    
+    @Override
+    public String reproducirse(String r){
+        return r;
     }
 
     public String getDuracion() {

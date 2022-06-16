@@ -14,8 +14,8 @@ public class Humano extends Animal {
     private String etnia;
     private String estatura;
 
-    public Humano(String nombre, String tipoReino, String entorno, String alimentacion, String reproduccion, String especie, String tipoSangre, String genero, int edad, String etnia, String estatura) {
-        super(nombre, tipoReino, entorno, alimentacion, reproduccion, especie, tipoSangre);
+    public Humano(String nombre, String tipoReino, String entorno, String especie, String tipoSangre, String genero, int edad, String etnia, String estatura) {
+        super(nombre, tipoReino, entorno, especie, tipoSangre);
         this.genero = genero;
         this.edad = edad;
         this.etnia = etnia;

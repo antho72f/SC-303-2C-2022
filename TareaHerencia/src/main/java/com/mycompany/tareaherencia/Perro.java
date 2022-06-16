@@ -11,9 +11,9 @@ package com.mycompany.tareaherencia;
 public class Perro extends Animal {
     private String raza;
     private String pedigree;
-
-    public Perro(String nombre, String tipoReino, String entorno, String alimentacion, String reproduccion, String especie, String tipoSangre, String raza, String pedigree) {
-        super(nombre, tipoReino, entorno, alimentacion, reproduccion, especie, tipoSangre);
+    
+    public Perro(String nombre, String tipoReino, String entorno, String especie, String tipoSangre, String raza, String pedigree) {
+        super(nombre, tipoReino, entorno, especie, tipoSangre);
         this.raza = raza;
         this.pedigree = pedigree;
     }
@@ -39,7 +39,7 @@ public class Perro extends Animal {
         StringBuilder sb = new StringBuilder();
         sb.append(super.toString());
         sb.append("\nRaza: ").append(raza);
-        sb.append("\nPedigree=").append(pedigree);
+        sb.append("\nPedigree: ").append(pedigree);
         return sb.toString();
     }
     
